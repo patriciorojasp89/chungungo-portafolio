@@ -52,6 +52,6 @@ chungungo-portafolio/
 ├─ js/
 │   └─ script.js                   # Lógica con JS + jQuery
 ├─ python/
-│   └─ conversor_tiempo_tareas.py  # Script del Módulo 3 (Python)
+│   └─ gestor_tareas.py            # Script del Módulo 3 (Python)
 └─ README.md                       # Documentación del proyecto
 
