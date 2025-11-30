@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chungungo Kanban – Portafolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Estilos propios (opcional, por ahora casi vacío) -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-dark text-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container">
+      <a class="navbar-brand" href="#">Chungungo</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarChungungo"
+        aria-controls="navbarChungungo"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarChungungo">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#tablero">Tablero</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#acerca">Acerca</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="py-5 text-center">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Chungungo Kanban</h1>
+      <p class="lead text-secondary">
+        Tablero simple para gestionar tareas
+      </p>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container mb-5">
+
+    <!-- Cards del tablero -->
+    <section id="tablero" class="row g-4 mb-5">
+      <div class="col-12 col-md-4">
+        <div class="card bg-secondary-subtle text-light h-100">
+          <div class="card-body">
+            <h2 class="card-title h5">Por hacer</h2>
+            <p class="card-text">Ejemplo de tarea por hacer.</p>
+            <div class="col-12 col-md-4">
+  <div class="card bg-secondary-subtle text-light h-100">
+    <div class="card-body">
+      <h2 class="card-title h5">Por hacer</h2>
+      <p class="card-text">Ejemplo de tarea por hacer.</p>
+
+      <!-- Botón para JS puro -->
+      <button class="btn btn-sm btn-outline-light" id="btn-add-task">
+        Agregar tarea de ejemplo
+      </button>
+
+      <!-- Lista donde se agregan tareas -->
+      <ul id="todo-list" class="mt-3 mb-0"></ul>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div id="progress-card" class="card bg-secondary-subtle text-light h-100">
+          <div class="card-body">
+            <h2 class="card-title h5">En progreso</h2>
+            <p class="card-text">Ejemplo de tarea en progreso.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="card bg-secondary-subtle text-light h-100">
+          <div class="card-body">
+            <h2 class="card-title h5">Completado</h2>
+            <p class="card-text">Ejemplo de tarea completada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Acerca del proyecto -->
+    <section id="acerca" class="mb-4">
+      <div class="card bg-black border-secondary">
+        <div class="card-body">
+          <h2 class="h5">Acerca del proyecto</h2>
+          <p class="mb-0">
+            Chungungo Kanban es un tablero sencillo para organizar tareas en columnas.
+            Este repositorio forma parte de mi portafolio y muestra el avance módulo a módulo,
+            utilizando HTML5, CSS3, Bootstrap, JavaScript y jQuery.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-3 bg-black">
+    <div class="container text-center text-secondary">
+      Desarrollado por Patricio Rojas · Chungungo Portafolio
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Bootstrap JS (bundle incluye Popper) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <!-- Archivo JS propio -->
+  <script src="js/script.js"></script>
+</body>
+</html>
