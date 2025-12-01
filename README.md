@@ -36,6 +36,12 @@ A medida que avance el curso, se irán incorporando más funcionalidades sobre e
   - Estructuras de datos (listas, diccionarios, tuplas).
   - Funciones para modularizar el código.
   - Programa de consola integrado al portafolio.
+- **Python avanzado**
+  - Crear un tablero desde la consola.
+  - Registrar tareas con título, descripción, prioridad, horas estimadas y fecha límite.
+  - Detectar automáticamente si una tarea es “grande” (≥ 8 horas).
+  - Clasificar la fecha según su estado: vencida, para hoy, próximos días o futura.
+  - Mostrar un resumen final con estadísticas y detalle de todas las tareas ingresadas.
 - **GitHub**:
   - Repositorio remoto para controlar versiones y registrar los avances del portafolio.
 
@@ -52,6 +58,7 @@ chungungo-portafolio/
 ├─ js/
 │   └─ script.js                   # Lógica con JS + jQuery
 ├─ python/
-│   └─ conversor_tiempo_tareas.py  # Script del Módulo 3 (Python)
+│   ├─ conversor_tiempo_tareas.py  # Script del Módulo 3 (Python)
+|   └─ tablero.py                  # Script del Módulo 4 (Python avanzado)
 └─ README.md                       # Documentación del proyecto
 
