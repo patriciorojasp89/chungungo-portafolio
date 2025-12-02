@@ -42,6 +42,12 @@ A medida que avance el curso, se irán incorporando más funcionalidades sobre e
   - Detectar automáticamente si una tarea es “grande” (≥ 8 horas).
   - Clasificar la fecha según su estado: vencida, para hoy, próximos días o futura.
   - Mostrar un resumen final con estadísticas y detalle de todas las tareas ingresadas.
+-**SQL**
+  - Creación del modelo relacional basado en las entidades reales del proyecto: User, Board, Column, Task,  Tag  la relación TaskTag.
+  - Generación del Diagrama Entidad–Relación (ER) del tablero Kanban.
+  - Script DDL para crear todas las tablas en MySQL usando claves primarias, foráneas y relaciones 1:N y N:M.
+  - Script DML con ejemplos de inserción, actualización y eliminación.
+  - Consultas SELECT con JOIN, WHERE, GROUP BY y filtros por fecha para obtener tareas por tablero, prioridad, etiquetas y estadísticas.
 - **GitHub**:
   - Repositorio remoto para controlar versiones y registrar los avances del portafolio.
 
@@ -60,5 +66,14 @@ chungungo-portafolio/
 ├─ python/
 │   ├─ conversor_tiempo_tareas.py  # Script del Módulo 3 (Python)
 |   └─ tablero.py                  # Script del Módulo 4 (Python avanzado)
+|
+├─sql/                             # Script del Módulo 4 (Bases de datos)
+|    ├─ modelo_relacional.md
+|    ├─ ddl_creacion_tablas.sql
+|    ├─ dml_ejemplos.sql
+|    ├─ consultas_select.sql
+|    └─ diagrama_er.png
+|
+|
 └─ README.md                       # Documentación del proyecto
 
