@@ -1,7 +1,7 @@
 # Chungungo Kanban – Portafolio
 
 Este proyecto corresponde a una versión simplificada del tablero **Chungungo Kanban**, creada específicamente para el **portafolio del curso**.  
-Aquí se muestran los avances módulo a módulo utilizando HTML5, CSS3, Bootstrap, JavaScript, jQuery y python.
+Aquí se muestran los avances módulo a módulo utilizando HTML5, CSS3, Bootstrap, JavaScript, jQuery, Python y Django.
 
 ## Objetivo
 
@@ -42,6 +42,25 @@ A medida que avance el curso, se irán incorporando más funcionalidades sobre e
   - Detectar automáticamente si una tarea es “grande” (≥ 8 horas).
   - Clasificar la fecha según su estado: vencida, para hoy, próximos días o futura.
   - Mostrar un resumen final con estadísticas y detalle de todas las tareas ingresadas.
+- **Django**
+  - Proyecto definido como modulo6
+  - App principal chungungo
+  - Uso del patrón MTV (Model–Template–View)
+  - Modelos
+  - Step: representa cada avance del portafolio (título, descripción, orden, completado).
+  - Templates
+  - step_list.html: muestra los pasos registrados desde la base de datos.
+  - step_form.html: formulario para crear nuevos pasos.
+  - login.html: autenticación para usuarios.
+  - Formularios
+  - StepForm basado en ModelForm para registrar nuevos pasos.
+  - Autenticación y autorización
+  - Login y logout con django.contrib.auth.
+  - Restricción de acceso a la creación de pasos (LoginRequiredMixin).
+  - Gestión de usuarios, grupos y permisos desde /admin.
+  - Admin personalizado
+  - Encabezados básicos para identificar el proyecto.
+  - Gestión completa del modelo Step.
 -**SQL**
   - Creación del modelo relacional basado en las entidades reales del proyecto: User, Board, Column, Task,  Tag  la relación TaskTag.
   - Generación del Diagrama Entidad–Relación (ER) del tablero Kanban.
@@ -58,16 +77,41 @@ A medida que avance el curso, se irán incorporando más funcionalidades sobre e
 ```text
 chungungo-portafolio/
 │
-├─ index.html                      # Página principal
+├─ index.html                           # Página principal       Módulo 2
 ├─ css/
-│   └─ styles.css                  # Estilos adicionales
+│   └─ styles.css                       # Estilos adicionales    Módulo 2
 ├─ js/
-│   └─ script.js                   # Lógica con JS + jQuery
+│   └─ script.js                        # Lógica con JS + jQuery Módulo 2
 ├─ python/
-│   ├─ conversor_tiempo_tareas.py  # Script del Módulo 3 (Python)
-|   └─ tablero.py                  # Script del Módulo 4 (Python avanzado)
+│   ├─ conversor_tiempo_tareas.py       # Script del Módulo 3 (Python)
+|   ├─ tablero.py                       # Script del Módulo 4 (Python avanzado)
+|   └─ python/django/modulo6/           # Script del Módulo 6 (Django)
+|       │
+|       ├─ manage.py
+|       │
+|       ├─ modulo6/                     # Proyecto Django
+|       │   ├─ settings.py
+|       │   ├─ urls.py
+|       │   └─ wsgi.py
+|       │
+|       ├─ chungungo/                   # App principal
+|       │   ├─ models.py                # Modelo Step
+|       │   ├─ forms.py                 # Formulario StepForm
+|       │   ├─ views.py                 # ListView + CreateView
+|       │   ├─ urls.py                  # Rutas de la app
+|       │   └─ admin.py                 # Administración del modelo Step
+|       │
+|       ├─ templates/
+|       │   ├─ chungungo/
+|       │   │   ├─ step_list.html       # Lista de pasos
+|       │   │   └─ step_form.html       # Formulario
+|       │   └─ registrations/
+|       │       └─ login.html           # Autenticación
+|       │
+|       └─ admin_usuarios_permisos.md   # Gestión de grupos, permisos y usuarios
 |
-├─sql/                             # Script del Módulo 4 (Bases de datos)
+|
+├─sql/                                  # Script del Módulo 5 (Bases de datos)
 |    ├─ modelo_relacional.md
 |    ├─ ddl_creacion_tablas.sql
 |    ├─ dml_ejemplos.sql
@@ -75,5 +119,5 @@ chungungo-portafolio/
 |    └─ diagrama_er.png
 |
 |
-└─ README.md                       # Documentación del proyecto
+└─ README.md                            # Documentación del proyecto
 
