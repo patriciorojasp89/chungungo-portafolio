@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo paso del portafolio</title>
+</head>
+<body>
+    <h1>Crear nuevo paso del portafolio</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <p>
+        <a href="{% url 'chungungo:step_list' %}">Volver a la lista de pasos</a>
+    </p>
+</body>
+</html>

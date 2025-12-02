@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pasos del Portafolio - Módulo 6</title>
+</head>
+<body>
+    <header>
+        <h1>Pasos del portafolio (Módulo 6)</h1>
+
+        <nav>
+            {% if user.is_authenticated %}
+                <span>Sesión iniciada como: {{ user.username }}</span> |
+                <a href="{% url 'logout' %}">Cerrar sesión</a>
+            {% else %}
+                <a href="{% url 'login' %}">Iniciar sesión</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    {% if user.is_authenticated %}
+        <p>
+            <a href="{% url 'chunguno:step_create' %}">Crear nuevo paso</a>
+        </p>
+    {% endif %}
+
+    <ul>
+        {% for step in steps %}
+            <li>
+                <strong>{{ step.order }}. {{ step.title }}</strong>
+                {% if step.is_completed %} ✅{% endif %}
+                <br>
+                {{ step.description }}
+            </li>
+        {% empty %}
+            <li>No hay pasos registrados todavía.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
