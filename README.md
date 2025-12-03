@@ -61,6 +61,14 @@ A medida que avance el curso, se irán incorporando más funcionalidades sobre e
   - Admin personalizado
   - Encabezados básicos para identificar el proyecto.
   - Gestión completa del modelo Step.
+  - Proyecto mínimo backend dentro del portafolio
+  - App principal **portafolio**
+  - Uso del patrón MTV (Model–Template–View)
+  - CRUD funcional del modelo Proyecto
+  - Integración con base de datos SQLite mediante ORM
+  - Migraciones para creación y modificación de tablas
+  - Consultas ORM y SQL crudo
+  - Admin con modelos registrados
 -**SQL**
   - Creación del modelo relacional basado en las entidades reales del proyecto: User, Board, Column, Task,  Tag  la relación TaskTag.
   - Generación del Diagrama Entidad–Relación (ER) del tablero Kanban.
@@ -82,42 +90,60 @@ chungungo-portafolio/
 │   └─ styles.css                       # Estilos adicionales    Módulo 2
 ├─ js/
 │   └─ script.js                        # Lógica con JS + jQuery Módulo 2
+│
 ├─ python/
 │   ├─ conversor_tiempo_tareas.py       # Script del Módulo 3 (Python)
-|   ├─ tablero.py                       # Script del Módulo 4 (Python avanzado)
-|   └─ python/django/modulo6/           # Script del Módulo 6 (Django)
-|       │
-|       ├─ manage.py
-|       │
-|       ├─ modulo6/                     # Proyecto Django
-|       │   ├─ settings.py
-|       │   ├─ urls.py
-|       │   └─ wsgi.py
-|       │
-|       ├─ chungungo/                   # App principal
-|       │   ├─ models.py                # Modelo Step
-|       │   ├─ forms.py                 # Formulario StepForm
-|       │   ├─ views.py                 # ListView + CreateView
-|       │   ├─ urls.py                  # Rutas de la app
-|       │   └─ admin.py                 # Administración del modelo Step
-|       │
-|       ├─ templates/
-|       │   ├─ chungungo/
-|       │   │   ├─ step_list.html       # Lista de pasos
-|       │   │   └─ step_form.html       # Formulario
-|       │   └─ registrations/
-|       │       └─ login.html           # Autenticación
-|       │
-|       └─ admin_usuarios_permisos.md   # Gestión de grupos, permisos y usuarios
-|
-|
-├─sql/                                  # Script del Módulo 5 (Bases de datos)
-|    ├─ modelo_relacional.md
-|    ├─ ddl_creacion_tablas.sql
-|    ├─ dml_ejemplos.sql
-|    ├─ consultas_select.sql
-|    └─ diagrama_er.png
-|
-|
-└─ README.md                            # Documentación del proyecto
-
+│   ├─ tablero.py                       # Script del Módulo 4 (Python avanzado)
+│   └─ python/django/modulo6/           # Script del Módulo 6 (Django)
+│       │
+│       ├─ manage.py
+│       │
+│       ├─ modulo6/                     # Proyecto Django (Módulo 6 )
+│       │   ├─ settings.py
+│       │   ├─ urls.py
+│       │   └─ wsgi.py
+│       │
+│       ├─ chungungo/                   # App principal (Módulo 6)
+│       │   ├─ models.py                # Modelo Step
+│       │   ├─ forms.py                 # Formulario StepForm
+│       │   ├─ views.py                 # ListView + CreateView
+│       │   ├─ urls.py                  # Rutas de la app
+│       │   └─ admin.py                 # Administración del modelo Step
+│       │
+│       ├─ templates/
+│       │   ├─ chungungo/
+│       │   │   ├─ step_list.html       # Lista de pasos
+│       │   │   └─ step_form.html       # Formulario
+│       │   └─ registrations/
+│       │       └─ login.html           # Autenticación
+│       │
+│       └─ admin_usuarios_permisos.md   # Gestión de grupos, permisos y usuarios
+│
+│
+├─ backend/                             # Backend Django Módulo 7
+│   ├─ settings.py
+│   ├─ urls.py
+│   └─ wsgi.py
+│
+├─ portafolio/                          # App Django minimalista
+│   ├─ models.py                        # Modelos + relaciones
+│   ├─ forms.py                         # Formulario ProyectoForm
+│   ├─ views.py                         # CRUD Proyecto
+│   ├─ urls.py                          # Rutas CRUD
+│   ├─ admin.py                         # Modelos registrados
+│   ├─ queries_example.py               # ORM + SQL crudo
+│   └─ templates/portafolio/
+│       ├─ lista_proyectos.html
+│       ├─ crear_proyecto.html
+│       ├─ editar_proyecto.html
+│       └─ confirmar_eliminar_proyecto.html
+│
+│
+├─ sql/                                  # Script del Módulo 5 (Bases de datos)
+│    ├─ modelo_relacional.md
+│    ├─ ddl_creacion_tablas.sql
+│    ├─ dml_ejemplos.sql
+│    ├─ consultas_select.sql
+│    └─ diagrama_er.png
+│
+└─ README.md

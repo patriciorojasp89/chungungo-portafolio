@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos</title>
+</head>
+<body>
+    <h1>Listado de proyectos</h1>
+
+    {% if proyectos %}
+        <ul>
+            {% for proyecto in proyectos %}
+                <li>
+                    <strong>{{ proyecto.titulo }}</strong><br>
+                    {{ proyecto.descripcion }}<br>
+                    {% if proyecto.url_demo %}
+                        Demo: <a href="{{ proyecto.url_demo }}">{{ proyecto.url_demo }}</a><br>
+                    {% endif %}
+                    {% if proyecto.url_codigo %}
+                        Código: <a href="{{ proyecto.url_codigo }}">{{ proyecto.url_codigo }}</a><br>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay proyectos creados todavía.</p>
+    {% endif %}
+</body>
+</html>
